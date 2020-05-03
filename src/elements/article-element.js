@@ -1,5 +1,4 @@
 import { article } from '../core/dom-api';
-import { get } from '../cache-store';
 
 export const ArticleElement = (props) => {
     let defaultProps = {
@@ -46,16 +45,6 @@ export const ArticleElement = (props) => {
     };
 
     template = createTemplate();
-
-    if (empty && props && props.id) {
-
-        let cached = get(props.id);
-
-        if (cached) {
-            data = cached.data;
-            render();
-        }
-    }
 
     return template;
 };

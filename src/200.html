@@ -19,21 +19,6 @@
       name="description"
       content="🍦 Hacker News Progressive Web App built with Vanilla Javascript. Part of https://hnpwa.com/."
     />
-    <script>
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", function() {
-          navigator.serviceWorker
-            .register("/sw.js", { scope: "/" })
-            .then(function() {
-              console.log("Service Worker Registered");
-            });
-
-          navigator.serviceWorker.ready.then(function() {
-            console.log("Service Worker Ready");
-          });
-        });
-      }
-    </script>
     <style>
        html,
       body {
