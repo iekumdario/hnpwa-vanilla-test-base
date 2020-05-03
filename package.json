@@ -8,9 +8,8 @@
     "copy-assets": "node copy-assets.js",
     "bundle:dev": "microbundle watch --output public --target browser --format cjs",
     "bundle": "microbundle --output public --target browser --format cjs --no-sourcemap",
-    "bundle:sw": "node sw-build.js",
-    "build": "rm -rf public; npm run bundle; npm run copy-assets; npm run bundle:sw; npm run html-minify",
-    "build:dev": "rm -rf public; npm run copy-assets; (npm run bundle:dev &); npm run bundle:sw; npm run serve;",
+    "build": "rm -rf public; npm run bundle; npm run copy-assets; npm run html-minify",
+    "build:dev": "rm -rf public; npm run copy-assets; (npm run bundle:dev &); npm run serve;",
     "deploy": "npm run build; surge --domain http://hnpwa-test-base.surge.sh",
     "undeploy": "surge teardown hnpwa-test-base.surge.sh",
     "serve": "serve ./public --listen 8080 --single"
