@@ -5,7 +5,6 @@ const { exec } = require('child_process');
 const options = [
     { from: path.resolve(__dirname, './src/index.html'), to: path.resolve(__dirname, './public/') },
     { from: path.resolve(__dirname, './src/manifest.json'), to: path.resolve(__dirname, './public/') },
-    { from: path.resolve(__dirname, './src/sw.js'), to: path.resolve(__dirname, './public/') },
     { from: path.resolve(__dirname, './assets'), to: path.resolve(__dirname, './public/') },
     { from: path.resolve(__dirname, './favicon.ico'), to: path.resolve(__dirname, './public/') }
 ];
